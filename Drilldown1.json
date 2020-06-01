@@ -13,7 +13,8 @@
             "published": false
         },
         "dashboardFilter": {
-            "timeframe": ""
+            "timeframe": "",
+            "managementZone": null
         }
     },
     "tiles": [{
