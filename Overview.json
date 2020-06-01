@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "configurationVersions": [3],
+        "clusterVersion": "1.195.55.20200529-155953"
+    },
+    "id": "1bdfebe3-8207-4c85-a71b-b733e96b74c6",
+    "dashboardMetadata": {
+        "name": "${myOverview} - App",
+        "shared": false,
+        "owner": "lucas.hocker@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": false
+        },
+        "dashboardFilter": {
+            "timeframe": ""
+        }
+    },
+    "tiles": [{
+        "name": "${appname}",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 304,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Action count (by Apdex category)",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TOP_LIST",
+                "series": [{
+                    "metric": "builtin:apps.web.actionCount.category",
+                    "aggregation": "NONE",
+                    "type": "LINE",
+                    "entityType": "APPLICATION",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.application",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Apdex category",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+                "APPLICATION": {
+                    "SPECIFIC_ENTITIES": ["${appid}"]
+                }
+            }
+        }
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 342,
+            "width": 152,
+            "height": 76
+        },
+        "tileFilter": {},
+        "markdown": "# [\uD83D\uDD0D](#dashboard;id=383894f7-0b96-4ae3-9e2e-93d939a7d65a)"
+    }]
+}
