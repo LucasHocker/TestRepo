@@ -1,0 +1,32 @@
+{
+    "metadata": {
+        "configurationVersions": [3],
+        "clusterVersion": "1.195.55.20200529-155953"
+    },
+    "id": "1bdfebe3-8207-4c85-a71b-b733e96b74aaa",
+    "dashboardMetadata": {
+        "name": "${overviewName}",
+        "shared": false,
+        "owner": "lucas.hocker@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": false
+        },
+        "dashboardFilter": {
+            "timeframe": ""
+        }
+    },
+    "tiles": [ {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 342,
+            "width": 152,
+            "height": 76
+        },
+        "tileFilter": {},
+        "markdown": "# app: ${MyApp}"
+    }]
+}
