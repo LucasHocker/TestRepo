@@ -5,7 +5,7 @@
     },
     "id": "1bdfebe3-8207-4c85-a71b-b733e96b74c6",
     "dashboardMetadata": {
-        "name": "${myOverview} - App",
+        "name": "${overviewName} - App",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -18,7 +18,7 @@
         }
     },
     "tiles": [{
-        "name": "${appname}",
+        "name": "${app.name}",
         "tileType": "CUSTOM_CHARTING",
         "configured": true,
         "bounds": {
@@ -59,7 +59,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["${appid}"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }

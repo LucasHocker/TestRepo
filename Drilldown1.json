@@ -5,7 +5,7 @@
     },
     "id": "383894f7-0b96-4ae3-9e2e-93d939a7d65a",
     "dashboardMetadata": {
-        "name": "${myOverview} - USP",
+        "name": "${overviewName} - USP",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -29,7 +29,7 @@
         },
         "tileFilter": {},
         "customName": "Apdex",
-        "query": "select ${usp} AS tenant, useraction.apdexCategory AS apdex, count(useraction.apdexCategory) as actions FROM usersession WHERE useraction.application=\"${appname}\" GROUP BY apdex, tenant",
+        "query": "select ${usp} AS tenant, useraction.apdexCategory AS apdex, count(useraction.apdexCategory) as actions FROM usersession WHERE useraction.application=\"${app.name}\" GROUP BY apdex, tenant",
         "type": "PIE_CHART",
         "limit": 50
     }]
