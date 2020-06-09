@@ -22,11 +22,11 @@
         "configured": true,
         "bounds": {
             "top": 0,
-            "left": 342,
-            "width": 152,
-            "height": 76
+            "left": 0,
+            "width": 988,
+            "height": 646
         },
         "tileFilter": {},
-        "markdown": "# app: ${app.name} (${app.id})"
+        "markdown": "# swaps \napp: ${app.name} (${app.id})\nusp: ${usp}\nuspkeyval: ${uspkeyval}\nfilterClause: ${filterClause}"
     }]
 }
