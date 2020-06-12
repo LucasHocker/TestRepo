@@ -27,6 +27,6 @@
             "height": 646
         },
         "tileFilter": {},
-        "markdown": "# swaps \napp: ${app.name} (${app.id})\nusp: ${usp}\nuspkeyval: ${uspkeyval}\nfilterClause: ${filterClause}"
+        "markdown": "# swaps \napp: ${app.name} (${app.id})\nusp: ${usp.name} (${usp.id})\nuspClause: ${uspClause}\nregionClause: ${regionClause}"
     }]
 }
