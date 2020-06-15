@@ -358,7 +358,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Medium",
-        "query": "select ${web_utm_medium.key}, count(internalUserId) as \"Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" group by ${web_utm_medium.key}",
+        "query": "select ${web_utm_medium}, count(internalUserId) as \"Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" group by ${web_utm_medium}",
         "type": "PIE_CHART",
         "limit": 50
     }, {
