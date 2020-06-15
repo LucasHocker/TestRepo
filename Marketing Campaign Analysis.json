@@ -5,7 +5,7 @@
     },
     "id": "ec52f71f-ffb1-4f7d-b460-62d996ac8c65",
     "dashboardMetadata": {
-        "name": "Sky.com - Campaign #252: 35 Percent Off Mobile Send Email",
+        "name": "${overviewName}",
         "shared": true,
         "owner": "Carl.Morphet@dynatrace.com",
         "sharingDetails": {
@@ -15,8 +15,8 @@
         "dashboardFilter": {
             "timeframe": "Today",
             "managementZone": {
-                "id": "9069174289501036960",
-                "name": "Production"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         }
     },
@@ -43,7 +43,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###An overview of the ${campaign.} campaign executing from 4th to 16th June"
+        "markdown": "###An overview of the ${web_utm_campaign.value} campaign executing from 4th to 16th June"
     }, {
         "name": "User Sessions Query",
         "tileType": "DTAQL",
@@ -131,7 +131,7 @@
         },
         "tileFilter": {},
         "customName": "Most Frustrated Campaign Visitors",
-        "query": "select internalUserId as \"Internal User Id\", stringProperties.intent as \"Intent\", stringProperties.error_header as \"Error Message\", numberOfRageClicks as \"# Rage Clicks\" from usersession where numberOfRageClicks>=2 and stringProperties.intent is not null and stringProperties.error_header is not null and stringProperties.error_header not like \"Unfortunately, you're not eligible for Sky Basics\" order by numberOfRageClicks desc",
+        "query": "select internalUserId as \"Internal User Id\", ${intent.key} as \"Intent\", ${error_header.key} as \"Error Message\", numberOfRageClicks as \"# Rage Clicks\" from usersession where numberOfRageClicks>=2 and ${intent.key} is not null and ${error_header.key} is not null and ${error_header.key} not like \"Unfortunately, you're not eligible for Sky Basics\" order by numberOfRageClicks desc",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -148,7 +148,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Adoption",
-        "query": "select count(internalUserId) as \"Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\"",
+        "query": "select count(internalUserId) as \"Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value\"",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -165,7 +165,7 @@
             "timeframe": "-14d"
         },
         "customName": "Bounced Campaign Visitor Device Type",
-        "query": "select browserType as \"Browser Type\", count(internalUserId) as \"Bounced Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" and bounce=true group by browserType",
+        "query": "select browserType as \"Browser Type\", count(internalUserId) as \"Bounced Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" and bounce=true group by browserType",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -182,7 +182,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Adoption",
-        "query": "select browserType as \"Browser Type\", count(internalUserId) as \"Mobile Bounced Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" group by browserType",
+        "query": "select browserType as \"Browser Type\", count(internalUserId) as \"Mobile Bounced Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" group by browserType",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -255,7 +255,7 @@
             "timeframe": "-14d"
         },
         "customName": "Converted Campaign Visitor Device Type",
-        "query": "select browserType as \"Browser Type\", count(internalUserId) as \"Converted Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" and useraction.name like '*checkout*' group by browserType",
+        "query": "select browserType as \"Browser Type\", count(internalUserId) as \"Converted Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" and useraction.name like '${goal}' group by browserType",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -272,7 +272,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Conversion",
-        "query": "select count(internalUserId) as \"Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" and useraction.name like '*checkout*'",
+        "query": "select count(internalUserId) as \"Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" and useraction.name like '${goal}'",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -289,7 +289,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Bounces",
-        "query": "select count(internalUserId) as \"Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" and bounce = true",
+        "query": "select count(internalUserId) as \"Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" and bounce = true",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -358,7 +358,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Medium",
-        "query": "select stringProperties.web_utm_medium, count(internalUserId) as \"Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" group by stringProperties.web_utm_medium",
+        "query": "select ${web_utm_medium.key}, count(internalUserId) as \"Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" group by ${web_utm_medium.key}",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -611,7 +611,7 @@
             "timeframe": "-7d"
         },
         "customName": "Campaign Visitor Error Popups",
-        "query": "select stringProperties.error_header as \"Error Popup\", count(internalUserId) as \"Campaign Visitor Count\" FROM usersession where stringProperties.error_header is not null and usersession.userType=\"REAL_USER\" and stringProperties.web_utm_campaign=\"252_staff_35_percent_off_mobile_send_email\" group by stringProperties.error_header",
+        "query": "select ${error_header.key} as \"Error Popup\", count(internalUserId) as \"Campaign Visitor Count\" FROM usersession where ${error_header.key} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\" group by ${error_header.key}",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -628,7 +628,7 @@
             "timeframe": "-7d"
         },
         "customName": "Campaign Visitors with Error Popups",
-        "query": "select count(internalUserId) as \"Campaign Visitors with Error Popups\" FROM usersession where stringProperties.error_header is not null and usersession.userType=\"REAL_USER\" and stringProperties.web_utm_campaign=\"252_staff_35_percent_off_mobile_send_email\"",
+        "query": "select count(internalUserId) as \"Campaign Visitors with Error Popups\" FROM usersession where ${error_header.key} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\"",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -645,7 +645,7 @@
             "timeframe": "-7d"
         },
         "customName": "Converted Campaign Visitors with Error Popups",
-        "query": "select count(internalUserId) as \"Converted despite Error Popups\" FROM usersession where stringProperties.error_header is not null and usersession.userType=\"REAL_USER\" and stringProperties.web_utm_campaign=\"252_staff_35_percent_off_mobile_send_email\" and useraction.name like '*checkout*'",
+        "query": "select count(internalUserId) as \"Converted despite Error Popups\" FROM usersession where ${error_header.key} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\" and useraction.name like '${goal}'",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -860,7 +860,7 @@
             "timeframe": "-14d"
         },
         "customName": "Campaign Adoption",
-        "query": "select DATETIME(startTime, \"dd-MM\", \"hour\") as \"Start Time\",  count(internalUserId) as \"Campaign Session Count\" FROM usersession where stringProperties.web_utm_campaign is not null and stringProperties.web_utm_campaign = \"252_staff_35_percent_off_mobile_send_email\" group by DATETIME(startTime, \"dd-MM\", \"hour\"), stringProperties.web_utm_campaign order by DATETIME(startTime, \"dd-MM\", \"hour\") desc",
+        "query": "select DATETIME(startTime, \"dd-MM\", \"hour\") as \"Start Time\",  count(internalUserId) as \"Campaign Session Count\" FROM usersession where ${web_utm_campaign.key} is not null and ${web_utm_campaign.key} = \"${web_utm_campaign.value}\" group by DATETIME(startTime, \"dd-MM\", \"hour\"), ${web_utm_campaign.key} order by DATETIME(startTime, \"dd-MM\", \"hour\") desc",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": false
