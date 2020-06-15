@@ -706,34 +706,8 @@
                     "sortAscending": false,
                     "sortColumn": false,
                     "aggregationRate": "TOTAL"
-                }, {
-                    "metric": "builtin:apps.web.actionDuration.load.browser",
-                    "aggregation": "COUNT",
-                    "type": "BAR",
-                    "entityType": "APPLICATION",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.application",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
                 }],
                 "resultMetadata": {
-                    "APPLICATION-28F0F419E69C5BBD¦APPLICATION»APPLICATION-28F0F419E69C5BBD»truebuiltin:apps.web.actionDuration.load.browser|COUNT|TOTAL|BAR|APPLICATION": {
-                        "lastModified": 1591367540109,
-                        "customColor": "#b4e5f9"
-                    },
-                    "APPLICATION-28F0F419E69C5BBD¦APPLICATION»APPLICATION-28F0F419E69C5BBD»truebuiltin:apps.web.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION": {
-                        "lastModified": 1591367537386,
-                        "customColor": "#7c38a1"
-                    },
-                    "APPLICATION-28F0F419E69C5BBD¦APPLICATION»APPLICATION-28F0F419E69C5BBD»truebuiltin:apps.web.bouncedSessionRatio|NONE|TOTAL|LINE|APPLICATION": {
-                        "lastModified": 1591367588536,
-                        "customColor": "#FF0000"
-                    }
                 }
             },
             "filtersPerEntityType": {}
