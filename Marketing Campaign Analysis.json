@@ -131,7 +131,7 @@
         },
         "tileFilter": {},
         "customName": "Most Frustrated Campaign Visitors",
-        "query": "select internalUserId as \"Internal User Id\", ${intent.key} as \"Intent\", ${error_header.key} as \"Error Message\", numberOfRageClicks as \"# Rage Clicks\" from usersession where numberOfRageClicks>=2 and ${intent.key} is not null and ${error_header.key} is not null and ${error_header.key} not like \"Unfortunately, you're not eligible for Sky Basics\" order by numberOfRageClicks desc",
+        "query": "select internalUserId as \"Internal User Id\", ${intent.key} as \"Intent\", ${error_header.id} as \"Error Message\", numberOfRageClicks as \"# Rage Clicks\" from usersession where numberOfRageClicks>=2 and ${intent.key} is not null and ${error_header.id} is not null and ${error_header.id} not like \"Unfortunately, you're not eligible for Sky Basics\" order by numberOfRageClicks desc",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -611,7 +611,7 @@
             "timeframe": "-7d"
         },
         "customName": "Campaign Visitor Error Popups",
-        "query": "select ${error_header.key} as \"Error Popup\", count(internalUserId) as \"Campaign Visitor Count\" FROM usersession where ${error_header.key} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\" group by ${error_header.key}",
+        "query": "select ${error_header.id} as \"Error Popup\", count(internalUserId) as \"Campaign Visitor Count\" FROM usersession where ${error_header.id} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\" group by ${error_header.id}",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -628,7 +628,7 @@
             "timeframe": "-7d"
         },
         "customName": "Campaign Visitors with Error Popups",
-        "query": "select count(internalUserId) as \"Campaign Visitors with Error Popups\" FROM usersession where ${error_header.key} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\"",
+        "query": "select count(internalUserId) as \"Campaign Visitors with Error Popups\" FROM usersession where ${error_header.id} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\"",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -645,7 +645,7 @@
             "timeframe": "-7d"
         },
         "customName": "Converted Campaign Visitors with Error Popups",
-        "query": "select count(internalUserId) as \"Converted despite Error Popups\" FROM usersession where ${error_header.key} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\" and useraction.name like '${goal}'",
+        "query": "select count(internalUserId) as \"Converted despite Error Popups\" FROM usersession where ${error_header.id} is not null and usersession.userType=\"REAL_USER\" and ${web_utm_campaign.key}=\"${web_utm_campaign.value}\" and useraction.name like '${goal}'",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
