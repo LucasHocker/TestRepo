@@ -43,7 +43,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###An overview of the ${web_utm_campaign.value} campaign executing from 4th to 16th June"
+        "markdown": "###An overview of the ${web_utm_campaign.value} campaign"
     }, {
         "name": "User Sessions Query",
         "tileType": "DTAQL",
@@ -131,7 +131,7 @@
         },
         "tileFilter": {},
         "customName": "Most Frustrated Campaign Visitors",
-        "query": "select internalUserId as \"Internal User Id\", ${intent.id} as \"Intent\", ${error_header.id} as \"Error Message\", numberOfRageClicks as \"# Rage Clicks\" from usersession where numberOfRageClicks>=2 and ${intent.id} is not null and ${error_header.id} is not null order by numberOfRageClicks desc",
+        "query": "select internalUserId as \"Internal User Id\", ${intent.id} as \"Intent\", ${error_header.id} as \"Error Message\", numberOfRageClicks as \"# Rage Clicks\" from usersession where numberOfRageClicks>=1 and ${intent.id} is not null and ${error_header.id} is not null order by numberOfRageClicks desc",
         "type": "TABLE",
         "limit": 50
     }, {
