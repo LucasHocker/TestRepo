@@ -1,0 +1,592 @@
+{
+    "metadata": {
+        "configurationVersions": [3],
+        "clusterVersion": "1.192.87.20200501-000127"
+    },
+    "id": "9ac630db-7eba-49e7-b781-aa7a1d02dddf",
+    "dashboardMetadata": {
+        "name": "www.angular.easytravel.com - Page Performance-cloned",
+        "shared": false,
+        "owner": "lucas.hocker@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": false
+        },
+        "dashboardFilter": {
+            "timeframe": "-7d to now"
+        }
+    },
+    "tiles": [{
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 1596,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "----"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 190,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## \uD83D\uDEA6[SRE Dashboard](#dashboard;gtf=-24h%20to%20now;gf=all;id=8cc12e1d-c136-4383-a834-3afcf20bac91) "
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 380,
+            "width": 228,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## ➵  [Digital Dashboard](#dashboard/dashboard;id=19ec4808-3ba8-413f-bfd5-0db3f49434cb;gtf=l_24_HOURS;gf=all)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 190,
+            "width": 190,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## ✅ [SLO Dashboard](#dashboard;gtf=-24h%20to%20now;gf=all;id=a67798f5-fd38-4ea2-ac5e-d8fe4faca839)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 874,
+            "width": 228,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## \uD83D\uDCC8 Page Performance\n"
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 0,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Home",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-C8D39C5D71268806"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 532,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Blog",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-2612BA2D355E4638"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 0,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Sign Up",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-ACE3354E70F79938"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 532,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Search",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-A28D6E1FAA389996"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 1064,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Special Offers",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-09820EC91823E816"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 684,
+            "left": 0,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Login",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.xhr.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425789186,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.xhr.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425795136,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-D899336DA83C9D7F"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 684,
+            "left": 532,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Book Travel",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.xhr.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425789186,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.xhr.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425795136,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-32C2C127D9DD8233"]
+                }
+            }
+        }
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 1064,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Add Trip",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.xhr.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425789186,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.xhr.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425795136,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-82980D96B19FC25E"]
+                }
+            }
+        }
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 608,
+            "width": 266,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## ☕  [Marketing Campaigns](#dashboard;id=4cefef48-f77b-4ee1-b57c-3ee6e78f902c;gtf=-24h%20to%20now;gf=all)\n"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 1102,
+            "width": 190,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## \uD83D\uDD1D [Top Report](#dashboard/dashboard;id=88b3b2a4-6242-444f-bbf0-5662d7d317b9;gtf=-24h%20to%20now;gf=all)\n"
+    }]
+}

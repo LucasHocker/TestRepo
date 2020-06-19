@@ -1,0 +1,396 @@
+{
+    "metadata": {
+        "configurationVersions": [3],
+        "clusterVersion": "1.192.87.20200501-000127"
+    },
+    "id": "e0c483a7-5ee0-4daf-91ba-ceaa519c2427",
+    "dashboardMetadata": {
+        "name": "www.angular.easytravel.com - Marketing Campaigns-cloned",
+        "shared": false,
+        "owner": "lucas.hocker@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": false
+        },
+        "dashboardFilter": {
+            "timeframe": "-24h to now"
+        }
+    },
+    "tiles": [{
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 1596,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "----"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 190,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## \uD83D\uDEA6[SRE Dashboard](#dashboard;gtf=-24h%20to%20now;gf=all;id=8cc12e1d-c136-4383-a834-3afcf20bac91) "
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 380,
+            "width": 228,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## ➵  [Digital Dashboard](#dashboard/dashboard;id=19ec4808-3ba8-413f-bfd5-0db3f49434cb;gtf=l_24_HOURS;gf=all)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 190,
+            "width": 190,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## ✅ [SLO Dashboard](#dashboard;gtf=-24h%20to%20now;gf=all;id=a67798f5-fd38-4ea2-ac5e-d8fe4faca839)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 874,
+            "width": 228,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## \uD83D\uDCC8 [Page Performance](#dashboard/dashboard;id=86a94f9c-4c33-4706-89ac-212aeead304f;gtf=-7d%20to%20now;gf=all)\n"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 608,
+            "width": 266,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## ☕  Marketing Campaigns\n"
+    }, {
+        "name": "Spring Sale",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 304,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Special Offers",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 1140,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 0,
+            "width": 760,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Conversions",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%spring_sale%\") AS \"Spring Sale\", (useraction.name=\"/easytravel/rest/validate-creditcard\") AS \"Purchase\") FROM usersession where useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "FUNNEL",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 836,
+            "width": 760,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Conversions",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%special_offers%\") AS \"Special Offers\", (useraction.name=\"/easytravel/rest/validate-creditcard\") AS \"Purchase\") FROM usersession where useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "FUNNEL",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 570,
+            "left": 380,
+            "width": 380,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Booking Total by Continent",
+        "query": "SELECT continent as \"Continent\", SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY continent ORDER BY sum(doubleProperties.revenue) DESC",
+        "type": "TABLE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 570,
+            "left": 1216,
+            "width": 380,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Booking Total by Continent",
+        "query": "SELECT continent as \"Continent\", SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY continent ORDER BY sum(doubleProperties.revenue) DESC",
+        "type": "TABLE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 608,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Errors",
+        "query": "SELECT SUM(errorCount) as \"Total\" FROM useraction where (targetUrl like \"%spring_sale%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 1444,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Errors",
+        "query": "SELECT SUM(errorCount) as \"Total\" FROM useraction where (targetUrl like \"%special_offers%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 456,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Response Time",
+        "query": "SELECT AVG(useraction.visuallyCompleteTime) as \"Average\" FROM useraction where (targetUrl like \"%spring_sale%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 152,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Booking - Average",
+        "query": "SELECT AVG(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 304,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Transactions",
+        "query": "SELECT Count(*) as \"Total\" FROM useraction where (targetUrl like \"%spring_sale%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 1140,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Transactions",
+        "query": "SELECT Count(*) as \"Total\" FROM useraction where (targetUrl like \"%special_offers%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 1292,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Response Time",
+        "query": "SELECT AVG(useraction.visuallyCompleteTime) as \"Average\" FROM useraction where (targetUrl like \"%special_offers%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 570,
+            "left": 0,
+            "width": 380,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Booking Total by Source & Medium",
+        "query": "SELECT stringProperties.web_utm_source as \"Source\", stringProperties.web_utm_medium as \"Medium\",  SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY stringProperties.web_utm_source, stringProperties.web_utm_medium ORDER BY sum(doubleProperties.revenue) DESC",
+        "type": "TABLE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 570,
+            "left": 836,
+            "width": 380,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Booking Total by Source & Medium",
+        "query": "SELECT stringProperties.web_utm_source as \"Source\", stringProperties.web_utm_medium as \"Medium\",  SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY stringProperties.web_utm_source, stringProperties.web_utm_medium ORDER BY sum(doubleProperties.revenue) DESC",
+        "type": "TABLE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 0,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Booking - Total",
+        "query": "SELECT SUM(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 836,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Booking - Total",
+        "query": "SELECT SUM(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign =\"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 114,
+            "left": 988,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Booking - Average",
+        "query": "SELECT AVG(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign=\"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "type": "SINGLE_VALUE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 874,
+            "left": 0,
+            "width": 760,
+            "height": 456
+        },
+        "tileFilter": {},
+        "customName": "Booking Total by Continent, Country, Region & City",
+        "query": "SELECT Continent, Country, Region, City, SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(doubleProperties.revenue) DESC Limit 10",
+        "type": "TABLE",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 874,
+            "left": 836,
+            "width": 760,
+            "height": 456
+        },
+        "tileFilter": {},
+        "customName": "Booking Total by Continent, Country, Region & City",
+        "query": "SELECT Continent, Country, Region, City, SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(doubleProperties.revenue) DESC Limit 10",
+        "type": "TABLE",
+        "limit": 50
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 1102,
+            "width": 190,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## \uD83D\uDD1D [Top Report](#dashboard/dashboard;id=88b3b2a4-6242-444f-bbf0-5662d7d317b9;gtf=-24h%20to%20now;gf=all)"
+    }]
+}
