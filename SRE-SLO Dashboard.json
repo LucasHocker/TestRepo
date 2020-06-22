@@ -258,7 +258,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["E-1234"],
+                        "values": ["${error_msg}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,

@@ -732,7 +732,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "* [Users with Booking Errors](${url}/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20x%20as%20%22Error%20Message%22,%20${revenue.id}%20as%20%22Booking%20Amount%22,%20stringProperties.adobe_evar11%20as%20%22Trip%20Destination%22,%20${loyaltystatus}%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27${app.name}%27%20AND%20stringProperties.bookingmessage%3D%27E-1234%27%20%20and%20hasSessionReplay%20%3D%20true&gtf=-24h%20to%20now&gf=all)"
+        "markdown": "* [Users with Booking Errors](${url}/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20x%20as%20%22Error%20Message%22,%20${revenue.id}%20as%20%22Booking%20Amount%22,%20stringProperties.adobe_evar11%20as%20%22Trip%20Destination%22,%20${loyaltystatus}%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27${app.name}%27%20AND%20stringProperties.bookingmessage%3D%27${error_msg}%27%20%20and%20hasSessionReplay%20%3D%20true&gtf=-24h%20to%20now&gf=all)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -756,7 +756,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "## ✅ [SLO Dashboard](#dashboard;gtf=-24h%20to%20now;gf=all;id=a67798f5-fd38-4ea2-ac5e-d8fe4faca839)"
+        "markdown": "## ✅ [SLO Dashboard](#dashboard;gtf=-24h%20to%20now;gf=all;id=a614db83-e092-4d29-8de9-bb2124c20f6e)"
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -783,7 +783,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["E-1234"],
+                        "values": ["${error_msg}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
@@ -814,7 +814,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "## ➵  [Digital Dashboard](#dashboard/dashboard;id=19ec4808-3ba8-413f-bfd5-0db3f49434cb;gtf=l_24_HOURS;gf=all)"
+        "markdown": "## ➵  [Digital Dashboard](#dashboard/dashboard;id=e8c80408-b76e-4ef6-9c26-dcf0cceea704;gtf=l_24_HOURS;gf=all)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -826,7 +826,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "## \uD83D\uDCC8 [Page Performance](#dashboard/dashboard;id=86a94f9c-4c33-4706-89ac-212aeead304f;gtf=-7d%20to%20now;gf=all)"
+        "markdown": "## \uD83D\uDCC8 [Page Performance](#dashboard/dashboard;id=9ac630db-7eba-49e7-b781-aa7a1d02dddf;gtf=-7d%20to%20now;gf=all)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -838,7 +838,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "## ☕  [Marketing Campaigns](#dashboard;id=4cefef48-f77b-4ee1-b57c-3ee6e78f902c;gtf=-24h%20to%20now;gf=all)"
+        "markdown": "## ☕  [Marketing Campaigns](#dashboard;id=e0c483a7-5ee0-4daf-91ba-ceaa519c2427;gtf=-24h%20to%20now;gf=all)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -850,7 +850,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "## \uD83D\uDD1D [Top Report](#dashboard/dashboard;id=88b3b2a4-6242-444f-bbf0-5662d7d317b9;gtf=-24h%20to%20now;gf=all)"
+        "markdown": "## \uD83D\uDD1D [Top Report](#dashboard/dashboard;id=04560d5f-58a8-4688-a87a-9a3128f85c20;gtf=-24h%20to%20now;gf=all)"
     }, {
         "name": "",
         "tileType": "CUSTOM_CHARTING",
@@ -893,7 +893,7 @@
                         "lastModified": 1591623115058,
                         "customColor": "#7cc33f"
                     },
-                    "null¦bookingmessage»E-1234»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»${error_msg}»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591625640160,
                         "customColor": "#de192f"
                     }
@@ -943,7 +943,7 @@
                         "lastModified": 1591623115058,
                         "customColor": "#7cc33f"
                     },
-                    "null¦bookingmessage»E-1234»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»${error_msg}»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591625640160,
                         "customColor": "#de192f"
                     }
