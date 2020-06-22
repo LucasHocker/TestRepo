@@ -5,7 +5,7 @@
     },
     "id": "04560d5f-58a8-4688-a87a-9a3128f85c20",
     "dashboardMetadata": {
-        "name": "www.angular.easytravel.com - Top Report-cloned",
+        "name": "${app.name} - Top Report",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -419,7 +419,7 @@
                 "legendShown": true,
                 "type": "TOP_LIST",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.topsearchdestinations",
+                    "metric": "calc:apps.web.${app.name}.topsearchdestinations",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -461,7 +461,7 @@
                 "legendShown": true,
                 "type": "TOP_LIST",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.topsearchdestinations",
+                    "metric": "calc:apps.web.${app.name}.topsearchdestinations",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",

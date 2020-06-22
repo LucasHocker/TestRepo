@@ -5,7 +5,7 @@
     },
     "id": "9ac630db-7eba-49e7-b781-aa7a1d02dddf",
     "dashboardMetadata": {
-        "name": "www.angular.easytravel.com - Page Performance-cloned",
+        "name": "${app.name} - Page Performance",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {

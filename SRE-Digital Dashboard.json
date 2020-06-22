@@ -5,7 +5,7 @@
     },
     "id": "e8c80408-b76e-4ef6-9c26-dcf0cceea704",
     "dashboardMetadata": {
-        "name": "www.angular.easytravel.com - Digital Dashboard-cloned",
+        "name": "${app.name} - Digital Dashboard",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -63,7 +63,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"]
+        "assignedEntities": ["${app.id}"]
     }, {
         "name": "Most used 3rd parties",
         "tileType": "THIRD_PARTY_MOST_ACTIVE",
@@ -75,7 +75,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"],
+        "assignedEntities": ["${app.id}"],
         "metric": "ACTION_COUNT"
     }, {
         "name": "User behavior",
@@ -88,7 +88,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"]
+        "assignedEntities": ["${app.id}"]
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -108,7 +108,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -145,7 +145,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -168,7 +168,7 @@
                         "lastModified": 1591418520484,
                         "customColor": "#7c38a1"
                     },
-                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|COUNT|TOTAL|LINE|APPLICATION": {
+                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»false${bookingmetric.id}|COUNT|TOTAL|LINE|APPLICATION": {
                         "lastModified": 1591636564066,
                         "customColor": "#7c38a1"
                     },
@@ -249,7 +249,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"]
+        "assignedEntities": ["${app.id}"]
     }, {
         "name": "Web application",
         "tileType": "APPLICATION",
@@ -261,7 +261,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"]
+        "assignedEntities": ["${app.id}"]
     }, {
         "name": "Site Peformance & Usage Analytics",
         "tileType": "HEADER",
@@ -284,7 +284,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"],
+        "assignedEntities": ["${app.id}"],
         "metric": "82b2a8ca-d705-411e-b8d0-64e3dcc50d2f"
     }, {
         "name": "Custom chart",
@@ -305,7 +305,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -375,7 +375,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.revenue",
+                    "metric": "calc:apps.web.${app.name}.revenue",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -455,7 +455,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -492,7 +492,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -522,7 +522,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Bookings by City",
-        "query": "SELECT TOP (city, 10) as City, Count(*) as Count FROM usersession where useraction.application = \"www.angular.easytravel.com\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\" and city IS NOT NULL GROUP BY City ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (city, 10) as City, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\" and city IS NOT NULL GROUP BY City ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -540,7 +540,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Travel Destinations",
-        "query": "SELECT TOP (stringProperties.adobe_evar11, 10) as Destination, Count(*) as Count FROM usersession where useraction.application = \"www.angular.easytravel.com\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and stringProperties.adobe_evar11 IS NOT NULL GROUP BY Destination ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (stringProperties.adobe_evar11, 10) as Destination, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and stringProperties.adobe_evar11 IS NOT NULL GROUP BY Destination ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -558,7 +558,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Bookings by Country",
-        "query": "SELECT TOP (country, 10) as Country, Count(*) as Count FROM usersession where useraction.application = \"www.angular.easytravel.com\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and country IS NOT NULL GROUP BY country ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (country, 10) as Country, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and country IS NOT NULL GROUP BY country ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -576,7 +576,7 @@
         },
         "tileFilter": {},
         "customName": "Bookings by Loyalty Status",
-        "query": "SELECT stringProperties.loyalty_status as \"Loyalty Status\", Count(*) as Count FROM usersession where useraction.application = \"www.angular.easytravel.com\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and (stringProperties.loyalty_status = \"Gold\" or stringProperties.loyalty_status = \"Silver\" or stringProperties.loyalty_status = \"Platinum\") GROUP BY stringProperties.loyalty_status ORDER BY Count(*) DESC",
+        "query": "SELECT ${loyaltystatus} as \"Loyalty Status\", Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and (${loyaltystatus} = \"Gold\" or ${loyaltystatus} = \"Silver\" or ${loyaltystatus} = \"Platinum\") GROUP BY ${loyaltystatus} ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": false

@@ -5,7 +5,7 @@
     },
     "id": "e0c483a7-5ee0-4daf-91ba-ceaa519c2427",
     "dashboardMetadata": {
-        "name": "www.angular.easytravel.com - Marketing Campaigns-cloned",
+        "name": "${app.name} - Marketing Campaigns",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -122,7 +122,7 @@
         },
         "tileFilter": {},
         "customName": "Conversions",
-        "query": "SELECT FUNNEL((useraction.targetUrl like \"%spring_sale%\") AS \"Spring Sale\", (useraction.name=\"/easytravel/rest/validate-creditcard\") AS \"Purchase\") FROM usersession where useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign.value}%\") AS \"Spring Sale\", (useraction.name=\"${finish}\") AS \"Purchase\") FROM usersession where useraction.application=\"${app.name}\" ",
         "type": "FUNNEL",
         "limit": 50
     }, {
@@ -137,7 +137,7 @@
         },
         "tileFilter": {},
         "customName": "Conversions",
-        "query": "SELECT FUNNEL((useraction.targetUrl like \"%special_offers%\") AS \"Special Offers\", (useraction.name=\"/easytravel/rest/validate-creditcard\") AS \"Purchase\") FROM usersession where useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign2.value}%\") AS \"Special Offers\", (useraction.name=\"${finish}\") AS \"Purchase\") FROM usersession where useraction.application=\"${app.name}\" ",
         "type": "FUNNEL",
         "limit": 50
     }, {
@@ -152,7 +152,7 @@
         },
         "tileFilter": {},
         "customName": "Booking Total by Continent",
-        "query": "SELECT continent as \"Continent\", SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY continent ORDER BY sum(doubleProperties.revenue) DESC",
+        "query": "SELECT continent as \"Continent\", SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY continent ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -167,7 +167,7 @@
         },
         "tileFilter": {},
         "customName": "Booking Total by Continent",
-        "query": "SELECT continent as \"Continent\", SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY continent ORDER BY sum(doubleProperties.revenue) DESC",
+        "query": "SELECT continent as \"Continent\", SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY continent ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -182,7 +182,7 @@
         },
         "tileFilter": {},
         "customName": "Errors",
-        "query": "SELECT SUM(errorCount) as \"Total\" FROM useraction where (targetUrl like \"%spring_sale%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT SUM(errorCount) as \"Total\" FROM useraction where (targetUrl like \"%${campaign.value}%\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -197,7 +197,7 @@
         },
         "tileFilter": {},
         "customName": "Errors",
-        "query": "SELECT SUM(errorCount) as \"Total\" FROM useraction where (targetUrl like \"%special_offers%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT SUM(errorCount) as \"Total\" FROM useraction where (targetUrl like \"%${campaign2.value}%\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -212,7 +212,7 @@
         },
         "tileFilter": {},
         "customName": "Response Time",
-        "query": "SELECT AVG(useraction.visuallyCompleteTime) as \"Average\" FROM useraction where (targetUrl like \"%spring_sale%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT AVG(useraction.visuallyCompleteTime) as \"Average\" FROM useraction where (targetUrl like \"%${campaign.value}%\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -227,7 +227,7 @@
         },
         "tileFilter": {},
         "customName": "Booking - Average",
-        "query": "SELECT AVG(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT AVG(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -242,7 +242,7 @@
         },
         "tileFilter": {},
         "customName": "Transactions",
-        "query": "SELECT Count(*) as \"Total\" FROM useraction where (targetUrl like \"%spring_sale%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT Count(*) as \"Total\" FROM useraction where (targetUrl like \"%${campaign.value}%\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -257,7 +257,7 @@
         },
         "tileFilter": {},
         "customName": "Transactions",
-        "query": "SELECT Count(*) as \"Total\" FROM useraction where (targetUrl like \"%special_offers%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT Count(*) as \"Total\" FROM useraction where (targetUrl like \"%${campaign2.value}%\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -272,7 +272,7 @@
         },
         "tileFilter": {},
         "customName": "Response Time",
-        "query": "SELECT AVG(useraction.visuallyCompleteTime) as \"Average\" FROM useraction where (targetUrl like \"%special_offers%\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT AVG(useraction.visuallyCompleteTime) as \"Average\" FROM useraction where (targetUrl like \"%${campaign2.value}%\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -287,7 +287,7 @@
         },
         "tileFilter": {},
         "customName": "Booking Total by Source & Medium",
-        "query": "SELECT stringProperties.web_utm_source as \"Source\", stringProperties.web_utm_medium as \"Medium\",  SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY stringProperties.web_utm_source, stringProperties.web_utm_medium ORDER BY sum(doubleProperties.revenue) DESC",
+        "query": "SELECT ${source.id} as \"Source\", ${medium.id} as \"Medium\",  SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY ${source.id}, ${medium.id} ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -302,7 +302,7 @@
         },
         "tileFilter": {},
         "customName": "Booking Total by Source & Medium",
-        "query": "SELECT stringProperties.web_utm_source as \"Source\", stringProperties.web_utm_medium as \"Medium\",  SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" GROUP BY stringProperties.web_utm_source, stringProperties.web_utm_medium ORDER BY sum(doubleProperties.revenue) DESC",
+        "query": "SELECT ${source.id} as \"Source\", ${medium.id} as \"Medium\",  SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY ${source.id}, ${medium.id} ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -317,7 +317,7 @@
         },
         "tileFilter": {},
         "customName": "Booking - Total",
-        "query": "SELECT SUM(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT SUM(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -332,7 +332,7 @@
         },
         "tileFilter": {},
         "customName": "Booking - Total",
-        "query": "SELECT SUM(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign =\"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT SUM(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key} =\"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -347,7 +347,7 @@
         },
         "tileFilter": {},
         "customName": "Booking - Average",
-        "query": "SELECT AVG(doubleProperties.revenue) as \"$$$\" FROM usersession where (stringProperties.web_utm_campaign=\"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" ",
+        "query": "SELECT AVG(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key}=\"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
     }, {
@@ -362,7 +362,7 @@
         },
         "tileFilter": {},
         "customName": "Booking Total by Continent, Country, Region & City",
-        "query": "SELECT Continent, Country, Region, City, SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"spring_sale\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(doubleProperties.revenue) DESC Limit 10",
+        "query": "SELECT Continent, Country, Region, City, SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(${revenue.id}) DESC Limit 10",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -377,7 +377,7 @@
         },
         "tileFilter": {},
         "customName": "Booking Total by Continent, Country, Region & City",
-        "query": "SELECT Continent, Country, Region, City, SUM(doubleProperties.revenue) as \"Total Booking $$$\" FROM usersession where (stringProperties.web_utm_campaign = \"special_offers\") and (useraction.name=\"/easytravel/rest/validate-creditcard\") and useraction.application=\"www.angular.easytravel.com\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(doubleProperties.revenue) DESC Limit 10",
+        "query": "SELECT Continent, Country, Region, City, SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(${revenue.id}) DESC Limit 10",
         "type": "TABLE",
         "limit": 50
     }, {

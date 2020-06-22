@@ -5,7 +5,7 @@
     },
     "id": "27e6daaa-29e4-44b2-a3aa-148b80be3524",
     "dashboardMetadata": {
-        "name": "www.angular.easytravel.com - SRE Dashboard-cloned",
+        "name": "${app.name} - SRE Dashboard",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -28,8 +28,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         }
     }, {
@@ -69,7 +69,7 @@
             },
             "filtersPerEntityType": {
                 "SYNTHETIC_BROWSER_MONITOR": {
-                    "SPECIFIC_ENTITIES": ["SYNTHETIC_TEST-76F7C7400F504093"]
+                    "SPECIFIC_ENTITIES": ["${synth.id}"]
                 }
             }
         }
@@ -147,7 +147,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -201,11 +201,11 @@
                         "lastModified": 1591502578549,
                         "customColor": "#7c38a1"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»truebuiltin:apps.web.visuallyComplete.load.browser|PERCENTILE|TOTAL|50|AREA|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»truebuiltin:apps.web.visuallyComplete.load.browser|PERCENTILE|TOTAL|50|AREA|APPLICATION": {
                         "lastModified": 1591455022633,
                         "customColor": "#008cdb"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»truebuiltin:apps.web.actionDuration.xhr.browser|PERCENTILE|TOTAL|50|AREA|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»truebuiltin:apps.web.actionDuration.xhr.browser|PERCENTILE|TOTAL|50|AREA|APPLICATION": {
                         "lastModified": 1591455025940,
                         "customColor": "#7c38a1"
                     },
@@ -213,7 +213,7 @@
                         "lastModified": 1588005491550,
                         "customColor": "#7c38a1"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»truebuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|AREA|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»truebuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|AREA|APPLICATION": {
                         "lastModified": 1591421745338,
                         "customColor": "#7c38a1"
                     },
@@ -221,7 +221,7 @@
                         "lastModified": 1591502573195,
                         "customColor": "#008cdb"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»truebuiltin:apps.web.visuallyComplete.load.browser|AVG|TOTAL|AREA|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»truebuiltin:apps.web.visuallyComplete.load.browser|AVG|TOTAL|AREA|APPLICATION": {
                         "lastModified": 1591421741355,
                         "customColor": "#008cdb"
                     },
@@ -237,7 +237,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -275,7 +275,7 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»true¦Error type»HTTP»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|BAR|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»true¦Error type»HTTP»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591422753009,
                         "customColor": "#de192f"
                     },
@@ -287,7 +287,7 @@
                         "lastModified": 1591636182952,
                         "customColor": "#de192f"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»true¦Error type»HTTP»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|LINE|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»true¦Error type»HTTP»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|LINE|APPLICATION": {
                         "lastModified": 1591422050325,
                         "customColor": "#de192f"
                     },
@@ -295,7 +295,7 @@
                         "lastModified": 1591636245568,
                         "customColor": "#ffa500"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»true¦Error type»JavaScript»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|BAR|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»true¦Error type»JavaScript»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591422759045,
                         "customColor": "#ef651f"
                     },
@@ -303,7 +303,7 @@
                         "lastModified": 1587781313178,
                         "customColor": "#de192f"
                     },
-                    "APPLICATION-008569CDB300AE03¦APPLICATION»APPLICATION-008569CDB300AE03»true¦Error type»JavaScript»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|LINE|APPLICATION": {
+                    "${app.id}¦APPLICATION»${app.id}»true¦Error type»JavaScript»falsebuiltin:apps.web.countOfErrors|NONE|TOTAL|LINE|APPLICATION": {
                         "lastModified": 1591422061891,
                         "customColor": "#fff29a"
                     },
@@ -315,7 +315,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -365,7 +365,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -424,7 +424,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -483,7 +483,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -528,7 +528,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -582,7 +582,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -636,12 +636,12 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
     }, {
-        "name": "Meijer Production",
+        "name": "${app.name}",
         "tileType": "APPLICATION_WORLDMAP",
         "configured": true,
         "bounds": {
@@ -651,7 +651,7 @@
             "height": 342
         },
         "tileFilter": {},
-        "assignedEntities": ["APPLICATION-008569CDB300AE03"],
+        "assignedEntities": ["${app.id}"],
         "metric": "APDEX"
     }, {
         "name": "\uD83D\uDEA6Health",
@@ -732,7 +732,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "* [Users with Booking Errors](https://yoj211.managed-sprint.dynalabs.io/e/ecc29184-1ae2-46dd-96fe-06997671fc57/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20stringProperties.bookingmessage%20as%20%22Error%20Message%22,%20doubleProperties.revenue%20as%20%22Booking%20Amount%22,%20stringProperties.adobe_evar11%20as%20%22Trip%20Destination%22,%20stringProperties.loyalty_status%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27www.angular.easytravel.com%27%20AND%20stringProperties.bookingmessage%3D%27E-1234%27%20%20and%20hasSessionReplay%20%3D%20true&gtf=-24h%20to%20now&gf=all)"
+        "markdown": "* [Users with Booking Errors](${url}/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20x%20as%20%22Error%20Message%22,%20${revenue.id}%20as%20%22Booking%20Amount%22,%20stringProperties.adobe_evar11%20as%20%22Trip%20Destination%22,%20${loyaltystatus}%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27${app.name}%27%20AND%20stringProperties.bookingmessage%3D%27E-1234%27%20%20and%20hasSessionReplay%20%3D%20true&gtf=-24h%20to%20now&gf=all)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -776,7 +776,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -870,7 +870,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "BAR",
                     "entityType": "APPLICATION",
@@ -885,15 +885,15 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|COUNT|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591623255608,
                         "customColor": "#7cc33f"
                     },
-                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|AVG|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»false${bookingmetric.id}|AVG|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591623115058,
                         "customColor": "#7cc33f"
                     },
-                    "null¦bookingmessage»E-1234»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|COUNT|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»E-1234»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591625640160,
                         "customColor": "#de192f"
                     }
@@ -920,7 +920,7 @@
                 "legendShown": true,
                 "type": "PIE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "BAR",
                     "entityType": "APPLICATION",
@@ -935,15 +935,15 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|COUNT|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591623255608,
                         "customColor": "#7cc33f"
                     },
-                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|AVG|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»Your journey was booked successfully! Open the summary and print out the ticket's.»false${bookingmetric.id}|AVG|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591623115058,
                         "customColor": "#7cc33f"
                     },
-                    "null¦bookingmessage»E-1234»falsecalc:apps.web.www.angular.easytravel.com.bookingmessage|COUNT|TOTAL|BAR|APPLICATION": {
+                    "null¦bookingmessage»E-1234»false${bookingmetric.id}|COUNT|TOTAL|BAR|APPLICATION": {
                         "lastModified": 1591625640160,
                         "customColor": "#de192f"
                     }
@@ -1025,7 +1025,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -1040,6 +1040,6 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "* [Users with Rage Clicks](https://yoj211.managed-sprint.dynalabs.io/e/ecc29184-1ae2-46dd-96fe-06997671fc57/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20numberOfRageClicks%20as%20%22Rage%20Click%20Count%22,%20stringProperties.loyalty_status%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27www.angular.easytravel.com%27%20AND%20%20hasSessionReplay%20%3D%20true%20and%20numberOfRageClicks%20%3E%200%20ORDER%20BY%20numberOfRageClicks%20DESC&gtf=-24h%20to%20now&gf=all&visualization=TABLE)"
+        "markdown": "* [Users with Rage Clicks](${url}/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20numberOfRageClicks%20as%20%22Rage%20Click%20Count%22,%20${loyaltystatus}%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27${app.name}%27%20AND%20%20hasSessionReplay%20%3D%20true%20and%20numberOfRageClicks%20%3E%200%20ORDER%20BY%20numberOfRageClicks%20DESC&gtf=-24h%20to%20now&gf=all&visualization=TABLE)"
     }]
 }

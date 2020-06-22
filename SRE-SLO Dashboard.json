@@ -5,7 +5,7 @@
     },
     "id": "a614db83-e092-4d29-8de9-bb2124c20f6e",
     "dashboardMetadata": {
-        "name": "www.angular.easytravel.com - SLO Dashboard-cloned",
+        "name": "${app.name} - SLO Dashboard",
         "shared": false,
         "owner": "lucas.hocker@dynatrace.com",
         "sharingDetails": {
@@ -53,7 +53,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -94,7 +94,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION-008569CDB300AE03"]
+                    "SPECIFIC_ENTITIES": ["${app.id}"]
                 }
             }
         }
@@ -251,7 +251,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -300,7 +300,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.bookingmessage",
+                    "metric": "${bookingmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -1038,7 +1038,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.www.angular.easytravel.com.revenue",
+                    "metric": "calc:apps.web.${app.name}.revenue",
                     "aggregation": "SUM",
                     "type": "LINE",
                     "entityType": "APPLICATION",
