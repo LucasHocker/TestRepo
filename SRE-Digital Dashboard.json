@@ -576,7 +576,7 @@
         },
         "tileFilter": {},
         "customName": "Bookings by Loyalty Status",
-        "query": "SELECT ${loyaltystatus} as \"Loyalty Status\", Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and (${loyaltystatus} = \"Gold\" or ${loyaltystatus} = \"Silver\" or ${loyaltystatus} = \"Platinum\") GROUP BY ${loyaltystatus} ORDER BY Count(*) DESC",
+        "query": "SELECT ${loyaltystatus.id} as \"Loyalty Status\", Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and (${loyaltystatus.id} = \"Gold\" or ${loyaltystatus.id} = \"Silver\" or ${loyaltystatus.id} = \"Platinum\") GROUP BY ${loyaltystatus.id} ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": false
