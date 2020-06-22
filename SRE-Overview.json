@@ -732,7 +732,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "* [Users with Booking Errors](${url}/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20${bookingmessage.key}%20as%20%22Error%20Message%22,%20${revenue.id}%20as%20%22Booking%20Amount%22,%20stringProperties.adobe_evar11%20as%20%22Trip%20Destination%22,%20${loyaltystatus.id}%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27${app.name}%27%20AND%20${bookingmessage.key}%3D%27${error_msg}%27%20%20and%20hasSessionReplay%20%3D%20true&gtf=-24h%20to%20now&gf=all)"
+        "markdown": "* [Users with Booking Errors](${url}/ui/user-sessions/query?sessionquery=SELECT%20userId%20as%20%22User%20Name%22,%20${bookingmessage.key}%20as%20%22Error%20Message%22,%20${revenue.id}%20as%20%22Booking%20Amount%22,%20${search.id}1%20as%20%22Trip%20Destination%22,%20${loyaltystatus.id}%20as%20%22Loyalty%20Status%22%20FROM%20usersession%20WHERE%20useraction.application%3D%27${app.name}%27%20AND%20${bookingmessage.key}%3D%27${error_msg}%27%20%20and%20hasSessionReplay%20%3D%20true&gtf=-24h%20to%20now&gf=all)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",

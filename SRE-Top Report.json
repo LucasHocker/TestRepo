@@ -419,13 +419,13 @@
                 "legendShown": true,
                 "type": "TOP_LIST",
                 "series": [{
-                    "metric": "calc:apps.web.${app.name}.topsearchdestinations",
+                    "metric": "${searchmetric.id}",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION",
                     "dimensions": [{
                         "id": "1",
-                        "name": "adobe_evar11",
+                        "name": "${search.name}1",
                         "values": [],
                         "entityDimension": false
                     }],
@@ -461,13 +461,13 @@
                 "legendShown": true,
                 "type": "TOP_LIST",
                 "series": [{
-                    "metric": "calc:apps.web.${app.name}.topsearchdestinations",
+                    "metric": "${searchmetric.id}",
                     "aggregation": "COUNT",
                     "type": "LINE",
                     "entityType": "APPLICATION",
                     "dimensions": [{
                         "id": "1",
-                        "name": "adobe_evar11",
+                        "name": "${search.name}1",
                         "values": [],
                         "entityDimension": false
                     }],

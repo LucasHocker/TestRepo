@@ -147,7 +147,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Sign Up",
+            "customName": "${method-3.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -182,7 +182,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to load the \"Special Offers\" page"
+        "markdown": "Median time taken for a user to load the \"${method-5.name}\" page"
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -196,7 +196,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Login",
+            "customName": "${method-6.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -280,7 +280,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to \"Sign Up\""
+        "markdown": "Median time taken for a user to \"${method-3.name}\""
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -331,7 +331,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Home",
+            "customName": "${method-1.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -390,7 +390,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to load the \"Home\" page"
+        "markdown": "Median time taken for a user to load the \"${method-1.name}\" page"
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -404,7 +404,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Search",
+            "customName": "${method-4.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -439,7 +439,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to  \"Search a Travel Destination\""
+        "markdown": "Median time taken for a user to  \"${method-4.name} a Travel Destination\""
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -453,7 +453,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Add Trip",
+            "customName": "${method-8.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -502,7 +502,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Book Travel",
+            "customName": "${method-9.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -537,7 +537,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to \"Login\""
+        "markdown": "Median time taken for a user to \"${method-6.name}\""
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -549,7 +549,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to \"Book Travel\""
+        "markdown": "Median time taken for a user to \"${method-9.name}\""
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -563,7 +563,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Special Offers",
+            "customName": "${method-5.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,

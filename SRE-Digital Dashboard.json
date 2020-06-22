@@ -540,7 +540,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Travel Destinations",
-        "query": "SELECT TOP (stringProperties.adobe_evar11, 10) as Destination, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and ${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and stringProperties.adobe_evar11 IS NOT NULL GROUP BY Destination ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (${search.id}1, 10) as Destination, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and ${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and ${search.id}1 IS NOT NULL GROUP BY Destination ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true

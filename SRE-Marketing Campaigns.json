@@ -100,7 +100,7 @@
         },
         "tileFilter": {}
     }, {
-        "name": "Special Offers",
+        "name": "${method-5.name}",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -137,7 +137,7 @@
         },
         "tileFilter": {},
         "customName": "Conversions",
-        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign2.value}%\") AS \"Special Offers\", (useraction.name=\"${finish}\") AS \"Purchase\") FROM usersession where useraction.application=\"${app.name}\" ",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign2.value}%\") AS \"${method-5.name}\", (useraction.name=\"${finish}\") AS \"Purchase\") FROM usersession where useraction.application=\"${app.name}\" ",
         "type": "FUNNEL",
         "limit": 50
     }, {

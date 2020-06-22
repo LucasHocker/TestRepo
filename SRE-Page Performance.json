@@ -89,7 +89,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Home",
+            "customName": "${method-1.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -112,7 +112,26 @@
                     "sortAscending": false,
                     "aggregationRate": "TOTAL",
                     "sortColumn": true
-                }],
+                },{
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }
+            ],
                 "resultMetadata": {
                     "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
@@ -147,7 +166,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Blog",
+            "customName": "${method-2.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -170,7 +189,26 @@
                     "sortAscending": false,
                     "aggregationRate": "TOTAL",
                     "sortColumn": true
-                }],
+                },{
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }
+            ],
                 "resultMetadata": {
                     "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
@@ -205,7 +243,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Sign Up",
+            "customName": "${method-3.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -221,6 +259,24 @@
                     "sortColumn": false
                 }, {
                     "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -263,7 +319,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Search",
+            "customName": "${method-4.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -279,6 +335,24 @@
                     "sortColumn": false
                 }, {
                     "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -321,7 +395,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Special Offers",
+            "customName": "${method-5.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -337,6 +411,24 @@
                     "sortColumn": false
                 }, {
                     "metric": "builtin:apps.web.action.count.load.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -379,13 +471,13 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Login",
+            "customName": "${method-6.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.load.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -394,9 +486,27 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
                     "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -445,13 +555,13 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Book Travel",
+            "customName": "${method-7.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.load.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -460,9 +570,27 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
                     "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -511,13 +639,13 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Add Trip",
+            "customName": "${method-8.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.load.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -526,9 +654,27 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
                     "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -601,13 +747,13 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Book Travel",
+            "customName": "${method-9.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.load.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -616,9 +762,27 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                },{
                     "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
