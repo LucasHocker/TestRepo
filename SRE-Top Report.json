@@ -145,8 +145,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -187,8 +187,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -229,8 +229,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -271,8 +271,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -318,8 +318,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -365,8 +365,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -407,8 +407,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {
@@ -449,8 +449,8 @@
         },
         "tileFilter": {
             "managementZone": {
-                "id": "3454183460044244211",
-                "name": "Angular EasyTravel"
+                "id": "${mz.id}",
+                "name": "${mz.name}"
             }
         },
         "filterConfig": {

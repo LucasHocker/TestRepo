@@ -307,7 +307,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["Your journey was booked successfully! Open the summary and print out the ticket's."],
+                        "values": ["${bookingmessage.value}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,

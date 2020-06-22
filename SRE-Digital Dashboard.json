@@ -115,7 +115,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["Your journey was booked successfully! Open the summary and print out the ticket's."],
+                        "values": ["${bookingmessage.value}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
@@ -152,7 +152,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["Your journey was booked successfully! Open the summary and print out the ticket's."],
+                        "values": ["${bookingmessage.value}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
@@ -462,7 +462,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["Your journey was booked successfully! Open the summary and print out the ticket's."],
+                        "values": ["${bookingmessage.value}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
@@ -499,7 +499,7 @@
                     "dimensions": [{
                         "id": "1",
                         "name": "bookingmessage",
-                        "values": ["Your journey was booked successfully! Open the summary and print out the ticket's."],
+                        "values": ["${bookingmessage.value}"],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
@@ -522,7 +522,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Bookings by City",
-        "query": "SELECT TOP (city, 10) as City, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\" and city IS NOT NULL GROUP BY City ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (city, 10) as City, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\" and city IS NOT NULL GROUP BY City ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -540,7 +540,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Travel Destinations",
-        "query": "SELECT TOP (stringProperties.adobe_evar11, 10) as Destination, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and stringProperties.adobe_evar11 IS NOT NULL GROUP BY Destination ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (stringProperties.adobe_evar11, 10) as Destination, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and stringProperties.adobe_evar11 IS NOT NULL GROUP BY Destination ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -558,7 +558,7 @@
         },
         "tileFilter": {},
         "customName": "Top 10 Bookings by Country",
-        "query": "SELECT TOP (country, 10) as Country, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and country IS NOT NULL GROUP BY country ORDER BY Count(*) DESC",
+        "query": "SELECT TOP (country, 10) as Country, Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and country IS NOT NULL GROUP BY country ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -576,7 +576,7 @@
         },
         "tileFilter": {},
         "customName": "Bookings by Loyalty Status",
-        "query": "SELECT ${loyaltystatus} as \"Loyalty Status\", Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.bookingmessage = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and (${loyaltystatus} = \"Gold\" or ${loyaltystatus} = \"Silver\" or ${loyaltystatus} = \"Platinum\") GROUP BY ${loyaltystatus} ORDER BY Count(*) DESC",
+        "query": "SELECT ${loyaltystatus} as \"Loyalty Status\", Count(*) as Count FROM usersession where useraction.application = \"${app.name}\" and stringProperties.${bookingmessage.key} = \"Your journey was booked successfully! Open the summary and print out the ticket's.\"  and (${loyaltystatus} = \"Gold\" or ${loyaltystatus} = \"Silver\" or ${loyaltystatus} = \"Platinum\") GROUP BY ${loyaltystatus} ORDER BY Count(*) DESC",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": false
