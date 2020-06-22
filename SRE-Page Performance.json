@@ -130,7 +130,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-C8D39C5D71268806"]
+                    "SPECIFIC_ENTITIES": ["${method-1.id}"]
                 }
             }
         }
@@ -188,7 +188,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-2612BA2D355E4638"]
+                    "SPECIFIC_ENTITIES": ["${method-2.id}"]
                 }
             }
         }
@@ -246,7 +246,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-ACE3354E70F79938"]
+                    "SPECIFIC_ENTITIES": ["${method-3.id}"]
                 }
             }
         }
@@ -304,7 +304,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-A28D6E1FAA389996"]
+                    "SPECIFIC_ENTITIES": ["${method-4.id}"]
                 }
             }
         }
@@ -362,7 +362,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-09820EC91823E816"]
+                    "SPECIFIC_ENTITIES": ["${method-5.id}"]
                 }
             }
         }
@@ -428,7 +428,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-D899336DA83C9D7F"]
+                    "SPECIFIC_ENTITIES": ["${method-6.id}"]
                 }
             }
         }
@@ -494,7 +494,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-32C2C127D9DD8233"]
+                    "SPECIFIC_ENTITIES": ["${method-7.id}"]
                 }
             }
         }
@@ -560,7 +560,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-82980D96B19FC25E"]
+                    "SPECIFIC_ENTITIES": ["${method-8.id}"]
                 }
             }
         }
@@ -588,5 +588,72 @@
         },
         "tileFilter": {},
         "markdown": "## \uD83D\uDD1D [Top Report](#dashboard/dashboard;id=04560d5f-58a8-4688-a87a-9a3128f85c20;gtf=-24h%20to%20now;gf=all)\n"
-    }]
+    }, {
+        "name": "Custom chart",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 684,
+            "left": 1064,
+            "width": 532,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Book Travel",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TIMESERIES",
+                "series": [{
+                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "aggregation": "NONE",
+                    "type": "BAR",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": false
+                }, {
+                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "aggregation": "AVG",
+                    "type": "LINE",
+                    "entityType": "APPLICATION_METHOD",
+                    "dimensions": [],
+                    "sortAscending": false,
+                    "aggregationRate": "TOTAL",
+                    "sortColumn": true
+                }],
+                "resultMetadata": {
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425248204,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.xhr.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425789186,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.xhr.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425795136,
+                        "customColor": "#008cdb"
+                    },
+                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                        "lastModified": 1591425245021,
+                        "customColor": "#ef651f"
+                    },
+                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                        "lastModified": 1591425261380,
+                        "customColor": "#008cdb"
+                    }
+                }
+            },
+            "filtersPerEntityType": {
+                "APPLICATION_METHOD": {
+                    "SPECIFIC_ENTITIES": ["${method-9.id}"]
+                }
+            }
+        }
+    }
+]
 }

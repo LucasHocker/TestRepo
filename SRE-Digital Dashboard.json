@@ -234,7 +234,7 @@
             },
             "filtersPerEntityType": {
                 "APPLICATION_METHOD": {
-                    "SPECIFIC_ENTITIES": ["APPLICATION_METHOD-32C2C127D9DD8233"]
+                    "SPECIFIC_ENTITIES": ["${method-7.id}"]
                 }
             }
         }
