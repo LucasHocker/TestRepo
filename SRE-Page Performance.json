@@ -95,7 +95,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-1.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION_METHOD",
@@ -104,7 +104,7 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "metric": "builtin:apps.web.action.count.${method-1.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -112,36 +112,18 @@
                     "sortAscending": false,
                     "aggregationRate": "TOTAL",
                     "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                }
+                },
             ],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-1.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-1.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-1.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -172,7 +154,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-2.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION_METHOD",
@@ -181,25 +163,7 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.count.load.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.${method-2.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -210,15 +174,15 @@
                 }
             ],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-2.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-2.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-2.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -249,7 +213,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-3.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION_METHOD",
@@ -258,25 +222,7 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.count.load.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.${method-3.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -286,15 +232,15 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-3.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-3.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-3.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -325,7 +271,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-4.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION_METHOD",
@@ -334,25 +280,7 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.count.load.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.${method-4.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -362,15 +290,15 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-4.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-4.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-4.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -401,7 +329,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-5.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
                     "entityType": "APPLICATION_METHOD",
@@ -410,25 +338,7 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.count.load.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
+                    "metric": "builtin:apps.web.action.count.${method-5.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -438,15 +348,15 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -477,7 +387,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "metric": "builtin:apps.web.action.count.${method-6.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -486,27 +396,9 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-6.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -514,7 +406,7 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-6.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
@@ -526,11 +418,11 @@
                         "lastModified": 1591425795136,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-6.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-6.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -561,7 +453,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "metric": "builtin:apps.web.action.count.${method-7.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -570,27 +462,9 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-7.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -598,7 +472,7 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-7.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
@@ -610,11 +484,11 @@
                         "lastModified": 1591425795136,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-7.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-7.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -645,7 +519,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "metric": "builtin:apps.web.action.count.${method-8.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -654,27 +528,9 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-8.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -682,7 +538,7 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-8.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
@@ -694,11 +550,11 @@
                         "lastModified": 1591425795136,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-8.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-8.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
@@ -753,7 +609,7 @@
                 "legendShown": true,
                 "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:apps.web.action.count.load.browser",
+                    "metric": "builtin:apps.web.action.count.${method-9.type}.browser",
                     "aggregation": "NONE",
                     "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
@@ -762,27 +618,9 @@
                     "aggregationRate": "TOTAL",
                     "sortColumn": false
                 }, {
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-9.type}.browser",
                     "aggregation": "AVG",
                     "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": true
-                },{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "APPLICATION_METHOD",
-                    "dimensions": [],
-                    "sortAscending": false,
-                    "aggregationRate": "TOTAL",
-                    "sortColumn": false
-                }, {
-                    "metric": "builtin:apps.web.action.count.xhr.browser",
-                    "aggregation": "NONE",
-                    "type": "BAR",
                     "entityType": "APPLICATION_METHOD",
                     "dimensions": [],
                     "sortAscending": false,
@@ -790,7 +628,7 @@
                     "sortColumn": true
                 }],
                 "resultMetadata": {
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-9.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425248204,
                         "customColor": "#008cdb"
                     },
@@ -802,11 +640,11 @@
                         "lastModified": 1591425795136,
                         "customColor": "#008cdb"
                     },
-                    "nullbuiltin:apps.web.action.visuallyComplete.load.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.visuallyComplete.${method-9.type}.browser|AVG|TOTAL|LINE|APPLICATION_METHOD": {
                         "lastModified": 1591425245021,
                         "customColor": "#ef651f"
                     },
-                    "nullbuiltin:apps.web.action.count.load.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
+                    "nullbuiltin:apps.web.action.count.${method-9.type}.browser|NONE|TOTAL|BAR|APPLICATION_METHOD": {
                         "lastModified": 1591425261380,
                         "customColor": "#008cdb"
                     }
