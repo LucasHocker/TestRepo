@@ -112,7 +112,7 @@
                     "sortAscending": false,
                     "aggregationRate": "TOTAL",
                     "sortColumn": true
-                },
+                }
             ],
                 "resultMetadata": {
                     "nullbuiltin:apps.web.action.count.${method-1.type}.browser|NONE|TOTAL|LINE|APPLICATION_METHOD": {
