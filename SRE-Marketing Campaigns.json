@@ -89,7 +89,7 @@
         "tileFilter": {},
         "markdown": "## ☕  Marketing Campaigns\n"
     }, {
-        "name": "Spring Sale",
+        "name": "${campaign.name}",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -100,7 +100,7 @@
         },
         "tileFilter": {}
     }, {
-        "name": "${method-5.name}",
+        "name": "${campaign2.name}",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -122,7 +122,7 @@
         },
         "tileFilter": {},
         "customName": "Conversions",
-        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign.value}%\") AS \"Spring Sale\", (useraction.name=\"${finish}\") AS \"Purchase\") FROM usersession where useraction.application=\"${app.name}\" ",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign.value}%\") AS \"${campaign.name}\", (useraction.name=\"${finish}\") AS \"${finish}\") FROM usersession where useraction.application=\"${app.name}\" ",
         "type": "FUNNEL",
         "limit": 50
     }, {
@@ -137,7 +137,7 @@
         },
         "tileFilter": {},
         "customName": "Conversions",
-        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign2.value}%\") AS \"${method-5.name}\", (useraction.name=\"${finish}\") AS \"Purchase\") FROM usersession where useraction.application=\"${app.name}\" ",
+        "query": "SELECT FUNNEL((useraction.targetUrl like \"%${campaign2.value}%\") AS \"${campaign2.name}\", (useraction.name=\"${finish}\") AS \"${finish}\") FROM usersession where useraction.application=\"${app.name}\" ",
         "type": "FUNNEL",
         "limit": 50
     }, {
@@ -151,7 +151,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "customName": "Booking Total by Continent",
+        "customName": "${finish} Total by Continent",
         "query": "SELECT continent as \"Continent\", SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY continent ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
@@ -166,7 +166,7 @@
             "height": 304
         },
         "tileFilter": {},
-        "customName": "Booking Total by Continent",
+        "customName": "${finish} Total by Continent",
         "query": "SELECT continent as \"Continent\", SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY continent ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
@@ -226,7 +226,7 @@
             "height": 152
         },
         "tileFilter": {},
-        "customName": "Booking - Average",
+        "customName": "${finish} - Average",
         "query": "SELECT AVG(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
@@ -286,8 +286,8 @@
             "height": 304
         },
         "tileFilter": {},
-        "customName": "Booking Total by Source & Medium",
-        "query": "SELECT ${source.id} as \"Source\", ${medium.id} as \"Medium\",  SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY ${source.id}, ${medium.id} ORDER BY sum(${revenue.id}) DESC",
+        "customName": "${finish} Total by Source & Medium",
+        "query": "SELECT ${source.id} as \"Source\", ${medium.id} as \"Medium\",  SUM(${revenue.id}) as \"Total $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY ${source.id}, ${medium.id} ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -301,8 +301,8 @@
             "height": 304
         },
         "tileFilter": {},
-        "customName": "Booking Total by Source & Medium",
-        "query": "SELECT ${source.id} as \"Source\", ${medium.id} as \"Medium\",  SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY ${source.id}, ${medium.id} ORDER BY sum(${revenue.id}) DESC",
+        "customName": "${finish} Total by Source & Medium",
+        "query": "SELECT ${source.id} as \"Source\", ${medium.id} as \"Medium\",  SUM(${revenue.id}) as \"Total $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" GROUP BY ${source.id}, ${medium.id} ORDER BY sum(${revenue.id}) DESC",
         "type": "TABLE",
         "limit": 50
     }, {
@@ -316,7 +316,7 @@
             "height": 152
         },
         "tileFilter": {},
-        "customName": "Booking - Total",
+        "customName": "${finish} - Total",
         "query": "SELECT SUM(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
@@ -331,7 +331,7 @@
             "height": 152
         },
         "tileFilter": {},
-        "customName": "Booking - Total",
+        "customName": "${finish} - Total",
         "query": "SELECT SUM(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key} =\"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
@@ -346,7 +346,7 @@
             "height": 152
         },
         "tileFilter": {},
-        "customName": "Booking - Average",
+        "customName": "${finish} - Average",
         "query": "SELECT AVG(${revenue.id}) as \"$$$\" FROM usersession where (${campaign.key}=\"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" ",
         "type": "SINGLE_VALUE",
         "limit": 50
@@ -361,7 +361,7 @@
             "height": 456
         },
         "tileFilter": {},
-        "customName": "Booking Total by Continent, Country, Region & City",
+        "customName": "${finish} Total by Continent, Country, Region & City",
         "query": "SELECT Continent, Country, Region, City, SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(${revenue.id}) DESC Limit 10",
         "type": "TABLE",
         "limit": 50
@@ -376,7 +376,7 @@
             "height": 456
         },
         "tileFilter": {},
-        "customName": "Booking Total by Continent, Country, Region & City",
+        "customName": "${finish} Total by Continent, Country, Region & City",
         "query": "SELECT Continent, Country, Region, City, SUM(${revenue.id}) as \"Total Booking $$$\" FROM usersession where (${campaign.key} = \"${campaign2.value}\") and (useraction.name=\"${finish}\") and useraction.application=\"${app.name}\" and city IS NOT NULL GROUP BY Continent, Country, Region, City ORDER BY sum(${revenue.id}) DESC Limit 10",
         "type": "TABLE",
         "limit": 50
