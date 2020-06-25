@@ -153,7 +153,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-3.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -202,7 +202,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-6.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -294,7 +294,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Booking - Success",
+            "customName": "${bookingmetric.name} - Success",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -337,7 +337,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-1.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -410,7 +410,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-4.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -439,7 +439,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for a user to  \"${method-4.name} a Travel Destination\""
+        "markdown": "Median time taken for a user to  \"${method-4.name}\""
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -459,7 +459,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-8.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -502,13 +502,13 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "${method-9.name}",
+            "customName": "${method-7.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.xhr.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-7.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -569,7 +569,7 @@
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:apps.web.action.visuallyComplete.load.browser",
+                    "metric": "builtin:apps.web.action.visuallyComplete.${method-5.type}.browser",
                     "aggregation": "PERCENTILE",
                     "percentile": 50,
                     "type": "LINE",
@@ -1032,13 +1032,13 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Revenue",
+            "customName": "${revenuemetric.name}",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
                 "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "calc:apps.web.${app.name}.revenue",
+                    "metric": "${revenuemetric.id}",
                     "aggregation": "SUM",
                     "type": "LINE",
                     "entityType": "APPLICATION",
@@ -1136,7 +1136,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Database - Response Time",
+            "customName": "${dbservice.name} - Response Time",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -1156,7 +1156,7 @@
             },
             "filtersPerEntityType": {
                 "SERVICE": {
-                    "SPECIFIC_ENTITIES": ["SERVICE-FDEC33AFE288CE86"]
+                    "SPECIFIC_ENTITIES": ["${dbservice.id}"]
                 }
             }
         }
@@ -1173,7 +1173,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Web Service - Response Time",
+            "customName": "${webservice.name} - Response Time",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -1193,7 +1193,7 @@
             },
             "filtersPerEntityType": {
                 "SERVICE": {
-                    "SPECIFIC_ENTITIES": ["SERVICE-B67B3EC4C95E0FA7"]
+                    "SPECIFIC_ENTITIES": ["${webservice.id}"]
                 }
             }
         }
@@ -1210,7 +1210,7 @@
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Web Service - Throughput",
+            "customName": "${webservice.name} - Throughput",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
@@ -1229,7 +1229,7 @@
             },
             "filtersPerEntityType": {
                 "SERVICE": {
-                    "SPECIFIC_ENTITIES": ["SERVICE-B67B3EC4C95E0FA7"]
+                    "SPECIFIC_ENTITIES": ["${webservice.id}"]
                 }
             }
         }
@@ -1352,7 +1352,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken taken to process easytravel service calls"
+        "markdown": "Median time taken to process webservice service calls"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -1364,7 +1364,7 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Number of requests to easytravel service per minute"
+        "markdown": "Number of requests to web service per minute"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -1376,6 +1376,6 @@
             "height": 76
         },
         "tileFilter": {},
-        "markdown": "Median time taken for easytravel service to process a db request"
+        "markdown": "Median time taken to process a db request"
     }]
 }
