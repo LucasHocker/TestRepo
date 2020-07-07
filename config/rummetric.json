@@ -1,0 +1,23 @@
+{
+  "applicationIdentifier": "APPLICATION-726A108B51CB78E2",
+  "name": "Source",
+  "metricKey": "calc:apps.web.www.angular.easytravel.com.source",
+  "enabled": true,
+  "metricDefinition": {
+    "metric": "UserActionDuration",
+    "propertyKey": null
+  },
+  "dimensions": [
+    {
+      "topX": 10,
+      "dimension": "StringProperty",
+      "propertyKey": "web_utm_source"
+    },
+    {
+      "topX": 10,
+      "dimension": "GeoLocation",
+      "propertyKey": null
+    }
+  ],
+  "userActionFilter": null
+}
