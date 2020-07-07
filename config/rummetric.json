@@ -1,7 +1,7 @@
 {
-  "applicationIdentifier": "APPLICATION-726A108B51CB78E2",
+  "applicationIdentifier": "${app.id}",
   "name": "Source",
-  "metricKey": "calc:apps.web.www.angular.easytravel.com.source",
+  "metricKey": "calc:apps.web.${app.name}.source",
   "enabled": true,
   "metricDefinition": {
     "metric": "UserActionDuration",
