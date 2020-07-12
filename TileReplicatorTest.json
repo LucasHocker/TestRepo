@@ -21,7 +21,7 @@
     },
     "tiles": [
         {
-            "name": "SAP App Left",
+            "name": "!app",
             "tileType": "CUSTOM_APPLICATION",
             "configured": true,
             "bounds": {
@@ -35,27 +35,10 @@
                 "managementZone": null
             },
             "assignedEntities": [
-                "${InternalAppID}"
+                "${app.id}"
             ]
         },
-        {
-            "name": "SAP APP Right",
-            "tileType": "CUSTOM_APPLICATION",
-            "configured": true,
-            "bounds": {
-                "top": 38,
-                "left": 456,
-                "width": 304,
-                "height": 152
-            },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "assignedEntities": [
-                "${InternalAppID}"
-            ]
-        },
+        
         {
             "name": "Application health",
             "tileType": "APPLICATIONS",
